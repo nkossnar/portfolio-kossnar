@@ -6,5 +6,5 @@ def home_page_view(request):
     return HttpResponse("Hello, World!")
 
 def home(request):
-    template = loader.get_template('pages/home.html')
+    template = loader.get_template('pages/maintemplate.html')
     return HttpResponse(template.render())
