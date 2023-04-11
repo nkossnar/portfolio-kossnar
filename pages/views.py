@@ -8,3 +8,7 @@ def home_page_view(request):
 def home(request):
     template = loader.get_template('pages/maintemplate.html')
     return HttpResponse(template.render())
+
+def react(request):
+    template = loader.get_template('pages/home.html')
+    return HttpResponse(template.render())
