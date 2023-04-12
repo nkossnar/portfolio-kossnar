@@ -380,7 +380,7 @@ select:disabled {
   display: none !important;
 }
 
-button,
+/* button,
 [type=button],
 [type=reset],
 [type=submit] {
@@ -391,7 +391,7 @@ button:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
   cursor: pointer;
-}
+} */
 
 ::-moz-focus-inner {
   padding: 0;
@@ -440,10 +440,10 @@ legend + * {
   height: auto;
 }
 
-[type=search] {
+/* [type=search] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
-}
+} */
 
 /* rtl:raw:
 [type="tel"],
@@ -461,10 +461,10 @@ legend + * {
   padding: 0;
 }
 
-::file-selector-button {
+/* ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
-}
+} */
 
 output {
   display: inline-block;
@@ -8128,7 +8128,7 @@ textarea.form-control-lg {
 .bg-primary {
   --bs-bg-opacity: 1;
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/pages/img/north_slopeREM.png");
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity), url("/static/pages/img/assets/img/bg-masthead.jpg")) !important;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-secondary {
