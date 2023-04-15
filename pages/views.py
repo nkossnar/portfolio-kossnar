@@ -10,5 +10,5 @@ def home(request):
     return HttpResponse(template.render())
 
 def react(request):
-    template = loader.get_template('pages/index.html')
+    template = loader.get_template('pages/test.html')
     return HttpResponse(template.render())
