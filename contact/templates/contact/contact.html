@@ -27,21 +27,19 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Nathan Kossnar</a>
+                <a class="navbar-brand-contact" href="https://www.nathankossnar.com">Nathan Kossnar</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="https://www.nathankossnar.com">Menu</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         
         <!-- Masthead-->
-        <header class="masthead">
+        {% comment %} <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
@@ -164,35 +162,44 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Call to action-->
-        {% comment %} <section class="page-section bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-            </div>
-        </section> {% endcomment %}
+        </div> {% endcomment %}
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0" href= "/contact/#contact">Let's Get In Touch!</h2>
-                        <a class="btn btn-primary btn-xl" href="/contact/#contact">Contact Me</a>
+                        <h2 class="mt-0">Let's Get In Touch!</h2>
                         <hr class="divider" />
                         <p class="text-muted mb-5"></p>
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        {% comment %} <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <div class="form-floating mb-3">
+
+{% block content %}
+{% if submitted %}
+    <p class="success">
+        Your message was submitted successfully. Thank you.
+    </p>
+
+{% else %}
+
+    <form action="" enctype="multipart/form-data" method="post" novalidate>
+    <table>
+        {{ form.as_table }}
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+    {% csrf_token %}
+    </form>
+
+{% endif %}
+{% endblock content %}
+                        </div>
+{% comment %} <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -238,38 +245,38 @@
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
                         </form> {% endcomment %}
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-envelope fs-2 mb-3 text-muted"></i>
-                        <div>nkossnar@gmail.com</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5">
-                <div class="small text-center text-muted">This website was built and developed by Nathan Kossnar using the following technologies <br>
-                    <img src="{% static 'pages/img/djangologo.png' %}" alt="Django" style="float:center" width="50" height:"50">
-                    <img src="{% static 'pages/img/postgreslogo.png' %}" alt="PostGreSQL" style="float:center" width="50" height:"50">
-                    <img src="{% static 'pages/img/dockerlogo.png' %}" alt="Docker" style="float:center" width="80" height:"80">
-                    <img src="{% static 'pages/img/gitlogo.png' %}" alt="Git" style="float:center" width="80" height:"80">
-                    <img src="{% static 'pages/img/htmlcssjslogos.png' %}" alt="HTML/CSS/JS" style="float:center" width="130" height:"110">
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{% static 'pages/js/scripts.js' %}"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-     </body>
+</div>
+</div>
+<div class="row gx-4 gx-lg-5 justify-content-center">
+<div class="col-lg-4 text-center mb-5 mb-lg-0">
+    <i class="bi-envelope fs-2 mb-3 text-muted"></i>
+    <div>nkossnar@gmail.com</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer-->
+<footer class="bg-light py-5">
+<div class="container px-4 px-lg-5">
+<div class="small text-center text-muted">This website was built and developed by Nathan Kossnar using the following technologies <br>
+<img src="{% static 'pages/img/djangologo.png' %}" alt="Django" style="float:center" width="50" height:"50">
+<img src="{% static 'pages/img/postgreslogo.png' %}" alt="PostGreSQL" style="float:center" width="50" height:"50">
+<img src="{% static 'pages/img/dockerlogo.png' %}" alt="Docker" style="float:center" width="80" height:"80">
+<img src="{% static 'pages/img/gitlogo.png' %}" alt="Git" style="float:center" width="80" height:"80">
+<img src="{% static 'pages/img/htmlcssjslogos.png' %}" alt="HTML/CSS/JS" style="float:center" width="130" height:"110">
+</div>
+</div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SimpleLightbox plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<!-- Core theme JS-->
+<script src="{% static 'pages/js/scripts.js' %}"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
 </html>
