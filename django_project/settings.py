@@ -48,7 +48,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
-ALLOWED_HOSTS = ["glacial-chamber-64384.herokuapp.com", "localhost", "127.0.0.1", "nathankossnar.com", "www.nathankossnar.com", "www.nathankossnar.com/react/"]
+ALLOWED_HOSTS = ["glacial-chamber-64384.herokuapp.com", "localhost", "127.0.0.1", "nathankossnar.com", "www.nathankossnar.com", "www.nathankossnar.com/react/", "www.nathankossnar.com/admin"]
 
 
 # Application definition
