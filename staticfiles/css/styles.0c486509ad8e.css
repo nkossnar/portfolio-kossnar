@@ -8136,7 +8136,7 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 0.5;
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/pages/img/assets/img/IMG_3780.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/pages/img/assets/img/IMG_3780.5073bab4417c.jpg");
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
   background-position: center;
   background-size: cover;
@@ -10941,7 +10941,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/pages/img/assets/img/desk_masthead.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/pages/img/assets/img/desk_masthead.09d1e2fb458a.jpg");
   background-position: 50% 15%;
   background-repeat: no-repeat;
   background-attachment: scroll;
